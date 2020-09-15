@@ -1,0 +1,65 @@
+__git 学习__
+=========
+
+### 1.创建版本库
+* 建立新仓库: `git init`
+(注意，必须要在git目录里进行)`cd learngit`
+* 将文件添加到仓库 :`git add`
+```
+	git add readme.txt
+```
+
+（新建文件夹 `touch` ）
+
+- 将文件提交到仓库：`git commit`
+
+```
+	git commit -m "wrote a readme file"
+```
+### 2.时光机穿梭
+* 掌握仓库状态：`git status`
+* 查看修改内容：`git diff <file>`
+* 查看修改历史：`git log`
+* 版本回退: `git reset --hard HEAD^`返回上一层，返回n层：`HEAD～n`
+(`cat <file >`显示文件)
+版本回退后，工作区文件就会被修改为之前的文件。
+* 查看命令历史 ：`git reflog`记录所有的命令，当你后悔时可以用
+### 3.工作区和暂存区
+>工作区：在电脑里能看到的目录
+>版本库：`.git`里的东西，包括暂存区
+>暂存区：使用`git add `命令后，即将该文件提交到暂存区
+>使用`git commit`即是将暂存区里的所有东西一次性提交上去
+
+### 4.撤销修改
+* 丢弃工作区的修改：`git checkout -- <file>`
+>有两种情况：
+>1.`file`自修改后还没有被放到`暂存区`，现在，撤销修改就回到和`版本库`一模一样的状态；
+> 		即上一次`git commit`后的状态
+>2.`file`已经添加到`暂存区`后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+>		即上一次`git add`后的状态
+
+* 丢弃暂存区的修改（即已经`git add `）用：`git reset HEAD <file>`
+>`git reset HEAD <file>`可以将暂存区的修改撤销掉
+>之后就可以再尝试丢弃工作区的修改
+
+* 若已经上传到了版本库
+>直接版本回退 `git reset --hard HEAD^`
+
+### 5.删除文件
+>linux命令：`rm <file>`删除文件
+>版本库中也要删除：`git rm`，并`git commit`
+>删错了要复原：`git checkout -- <file>`即同撤销工作区的修改
+************************************************
+
+远程仓库
+----------------
+>* 关联远程库：`git remote add origin git@server-name:path/repo-name.git`
+>* 关联后第一次推送：`git push -u origin master`
+>* 之后推送：`git push origin master`
+
+* 从远程库克隆
+>* git clone `git clone git@github.com:Davinccci/gitskills.git`
+
+分支管理
+-------
+* 
