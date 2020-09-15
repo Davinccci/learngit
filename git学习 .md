@@ -62,4 +62,22 @@ __git 学习__
 
 分支管理
 -------
-* 
+1. 创建分支 `git branch dev`
+
+2. 切换分支 `git checkout dev`   或`git switch`
+
+3. 查看当前分支`git branch`
+
+   ```  
+   git branch 会列出当前所有分支，当前分支前面会标一个‵*‵
+   ```
+
+4. 在dev分支的操作若切换回master分支会全部撤回
+
+5. 分支合并到当前分支`git merge dev`
+
+6. 删除分支 `git branch -d dev` 
+
+####    解决冲突
+
+1. 
