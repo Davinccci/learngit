@@ -84,10 +84,9 @@ __git 学习__
 
 1. 重新将某分支commit到当前分支`git merge --no-ff -m"xxx" dev`
 
-   ![git-no-ff-mode](/home/li/git/learngit/git%E5%AD%A6%E4%B9%A0%20.assets/0)
 
 ```策略：
-在实际开发中，我们应该按照几个基本原则进行分支管理：
+![0](/home/li/%E6%A1%8C%E9%9D%A2/0.png在实际开发中，我们应该按照几个基本原则进行分支管理：
 
 首先，`master`分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
 
@@ -96,9 +95,10 @@ __git 学习__
 你和你的小伙伴们每个人都在`dev`分支上干活，每个人都有自己的分支，时不时地往`dev`分支上合并就可以了。
 
 所以，团队合作的分支看起来就像这样：
+
 ```
 
-![git-br-policy](/home/li/git/learngit/git%E5%AD%A6%E4%B9%A0%20.assets/0)
+#### ![0](/home/li/git/learngit/git%E5%AD%A6%E4%B9%A0%20.assets/0.png)
 
 #### bug分支
 
